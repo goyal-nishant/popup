@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <a href="#" id="popuplink">Click me</a>
+    </div>
+    <div id="popup">
+        <div class="overlay">
+            <p>This is a popup!</p>
+            <button id="pop-btn">Close</button>
+        </div>
+    </div>
+    <script>
+        
+        document.getElementById('popuplink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('popup').style.display = 'flex';
+        });
+
+        document.getElementById('pop-btn').addEventListener('click',function() {
+            document.getElementById('popup').style.display = 'none';
+        })
+
+    </script>
+</body>
+</html>
